@@ -1,0 +1,9 @@
+[loadBalancer]
+<ip> ansible_user=ec2-user
+# ansible_ssh_pass=<keyname> ansible_connection=ssh
+
+[WebServers]
+<ip> ansible_user=ec2-user
+# ansible_ssh_pass=<keyname> ansible_connection=ssh
+<ip> ansible_user=ec2-user
+# ansible_ssh_pass=<keyname> ansible_connection=ssh
