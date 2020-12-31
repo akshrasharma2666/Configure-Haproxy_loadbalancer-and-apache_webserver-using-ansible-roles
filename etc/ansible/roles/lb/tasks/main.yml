@@ -1,0 +1,11 @@
+---
+# tasks file for lb
+
+- name: "Installing Haproxy software"
+  package:
+     name: "haproxy"
+     state: present
+     
+- name: "Copy haproxy configuration file"
+  template:
+     src:
