@@ -1,0 +1,22 @@
+---
+#tasks file for webserver
+
+- name: "Installing httpd software"
+  package:
+      name: "httpd"
+      state: present
+ 
+- name: "Installing php"
+  package:
+       name: "php"
+       state: present
+       
+- name: "Copying web content"
+  template:
+       src: "/root/web.php"
+       dest: "/var/www/html"
+       
+- name: "Restarting httpd service"
+  service:
+       name: "httpd"
+       state: restarted
