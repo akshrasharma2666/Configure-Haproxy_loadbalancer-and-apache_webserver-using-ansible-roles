@@ -8,4 +8,17 @@
      
 - name: "Copy haproxy configuration file"
   template:
-     src:
+     src: "haproxy.cfg"
+     dest: "/etc/haproxy/haproxy.cfg"
+     
+- name: "Start haproxy service"
+  service: 
+      name: "haproxy"
+      state: restarted
+      
+#- name: "Allow firewalld port https"
+#   firewalld:
+#       port: 80/tcp
+#       state: enabled
+#       permanent: yes
+#       immediate: yes
