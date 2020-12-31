@@ -1,0 +1,11 @@
+---
+#tasks file for project
+
+#major playbook
+- hosts: loadBalancer
+  roles:
+  - role: lb
+  
+- hosts: WebServers
+  roles:
+  - role: webserver
